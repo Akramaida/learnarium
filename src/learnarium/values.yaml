@@ -1,0 +1,21 @@
+# values.yaml
+
+# Переменные для развертывания
+deployment:
+  replicaCount: 1
+  container:
+    name: learnarium
+    image: openjdk:21
+    port: 8080
+
+# Переменные для сервиса
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080
+
+# Переменные для Ingress
+ingress:
+  host: localhost
+  path: /credentials
+  pathType: Prefix

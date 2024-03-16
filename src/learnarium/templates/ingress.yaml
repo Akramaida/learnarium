@@ -1,0 +1,20 @@
+# ingress.yaml
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: learnarium-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - path: /credentials
+            pathType: Prefix
+            backend:
+              service:
+                name: learnarium-service
+                port:
+                  number: 80

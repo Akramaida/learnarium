@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learnarium-deployment-new2
+spec:
+  replicas: 1  # Количество реплик вашего приложения
+  selector:
+    matchLabels:
+      app: learnarium
+  template:
+    metadata:
+      labels:
+        app: learnarium
+    spec:
+      containers:
+        - name: learnarium
+          image: openjdk:21
+          ports:
+            - containerPort: 8080
+
+
+

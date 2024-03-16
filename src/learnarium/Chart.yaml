@@ -1,0 +1,17 @@
+apiVersion: v2
+name: learnarium
+description: A Helm chart for deploying the Learnarium application
+version: 0.1.0
+appVersion: 1.0.0
+type: application
+keywords:
+  - learnarium
+  - kubernetes
+  - helm
+home: https://github.com/akramaida/learnarium
+sources:
+  - https://github.com/akramaida/learnarium
+maintainers:
+  - name: Akraman Gorbakov
+    email: amir.gorskiy@gmail.com
+icon: https://learnarium.com/learnarium-icon.png
